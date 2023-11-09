@@ -21,6 +21,8 @@
 //=====[Declaration and initialization of private global variables]============
 
 static float dutyCycle = 0.5f;
+static float dutyCycle2 = 0.5f;
+static float dutyCycle3 = 0.5f;
 
 //=====[Implementations of public functions]===================================
 
@@ -32,10 +34,12 @@ void lightSystemInit()
 void lightSystemUpdate()
 {
     dutyCycle = lightLevelControlRead();
+    dutyCycle2 = lightLevelControlRead2();
+    dutyCycle3 = lightLevelControlRead3();
 
     setDutyCycle( RGB_LED_RED, dutyCycle );
-    setDutyCycle( RGB_LED_GREEN, dutyCycle );
-    setDutyCycle( RGB_LED_BLUE, dutyCycle );
+    setDutyCycle( RGB_LED_GREEN, dutyCycle2 );
+    setDutyCycle( RGB_LED_BLUE, dutyCycle3 );
 
 }
 

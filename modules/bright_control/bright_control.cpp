@@ -1,4 +1,5 @@
 //=====[Libraries]=============================================================
+#include <cstdio>
 
 #include "arm_book_lib.h"
 
